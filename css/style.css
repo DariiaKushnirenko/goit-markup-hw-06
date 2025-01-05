@@ -550,21 +550,28 @@ a {
 }
 
 .team-section .container {
-    width: 296px;
+    max-width: 296px;
   
 }
 
 @media screen and (min-width: 768px) {
     .team-section .container { 
-        width: 584px;
+        max-width: 584px;
         
     }
 }
 
+
+@media screen and (min-width: 1158px) {
+    .team-section .container {
+        max-width: 1158px;
+    }
+}
 @media screen and (min-width: 1158px) {
     .team-section {
         padding-top: 120px;
         padding-bottom: 120px;
+
     }
 }
 
@@ -596,6 +603,7 @@ a {
 @media screen and (min-width: 1158px) {
     .team-list {
         flex-wrap: nowrap;
+
     }
 }
         
