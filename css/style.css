@@ -64,6 +64,7 @@ a {
     margin: 0 auto;
 }
 
+
 @media screen and (min-width: 767px) {
     .container {
         max-width: 736px;
@@ -85,6 +86,7 @@ a {
     text-transform: uppercase;
     color: #4d5ae5;
 }
+
 
 .nav-logo .studio {
     font-family: "Raleway", sans-serif;
@@ -113,11 +115,38 @@ a {
 .nav .item:active {
     color: #404bbf;
     text-decoration: underline;
+
+}
+
+@media screen and (min-width: 767px) {
+.item.highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    background-color: #404bbf;
+    border-radius: 2px;
+    height: 4px;
+    width: 100%;
+    left: 0;
+}
+
+.item.highlight {
+    color: #404bbf;
+    
+}
+.item {
+    position: relative;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: block;
+    color: #404bbf;
+}
 }
 
 @media screen and (min-width: 767px) {
     .nav {
         display: flex;
+        align-items: baseline;
     }
 }
 
@@ -357,7 +386,8 @@ a {
 @media only screen and (min-width: 1158px) {
     .hero {
         background-size: cover;
-        max-width: 1140px;
+        max-width: 1440px;
+        padding: 188px 0;
         background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),url('../images/layouts/hero-image-desktop-1x.jpg');
     }
 }
@@ -455,13 +485,16 @@ a {
     color: #2e2f42;
     margin-bottom: 8px;
 }
-
 @media screen and (min-width: 768px) {
+    .section-header-advantages {text-align: start;
+    }
+}
+
+@media screen and (min-width: 1158px) {
     .section-header-advantages {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
-    text-align: start;
     }
 }
 
@@ -890,9 +923,10 @@ a {
     justify-content: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
     .footer .container {
         width: 584px;
+        justify-content: flex-start;
     }
 }
 
